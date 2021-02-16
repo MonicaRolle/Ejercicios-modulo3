@@ -96,14 +96,20 @@ if(variable<0){
 
  var num = parseInt(prompt("Introduce un numero"));
  
- if(num > 100){
+ if(num >= 100){
     console.log("El numero "+num+ " es mayor que 100")
  }else{
     console.log("El numero "+num+ " es menor que 100")
  }
+
  
 // 9º Usa 3 variables que contengan un número y di si el tercero es igual a la suma del primero y el segundo.
 
-var a;
-var b;
-var c;
+var a=2;
+var b=3;
+var c=6;
+
+var suma = a + b;
+
+var resultado= suma == c ? "La tercera variable es igual a la suma": "El tercero no es igual a la suma";
+console.log(resultado);
