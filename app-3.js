@@ -1,5 +1,5 @@
-var entreSemana =
-    [{day: "Lunes", subject: "Matemáticas",},
+var horario = [
+    {day: "Lunes", subject: "Matemáticas",},
     {day: "Martes", subject: "Lengua",},
     {day: "Miércoles", subject: "Física",},
     {day: "Jueves", subject: "Química",},
@@ -7,11 +7,30 @@ var entreSemana =
     ]
         
 // 1º Escribir en una variable un día de la semana y decir cual asignatura toca ese día.
+var dia = "Jueves";
+switch(dia){
+    case horario[0].day:
+        console.log(horario[0].subject);
+    break;
+    case horario[1].day:
+        console.log(horario[1].subject);
+    break;
+    case horario[2].day:
+        console.log(horario[2].subject);
+    break;
+    case horario[3].day:
+        console.log(horario[3].subject);
+    break;
+    case horario[4].day:
+        console.log(horario[4].subject);
+    break;
+
+}
 
 
 // 2º Según una variable llamada hora , mostrar un buenos días, buenas tardes o buenas noches según la hora. Se utilizarán los tramos de 6 a 12, de 13 a 20 y de 21 a 5. Solo se tienen en cuenta la hora no los minutos.
 
-var hora = 14; //6 a 12, de 13 a 20 y de 21 a 5
+var hora = 14; 
 
 if( hora > 6 && hora <= 12){
     console.log("Buenos días");
@@ -78,28 +97,26 @@ var mesNacimiento;
 // 6º Según una variable llamada numero , calcule si es par o inpar.
 
 var numero = parseInt(prompt("Introduce un numero"));
-if(numero % 2 == 0){
-    console.log( "El número "+ numero+ " es par.")
-}else{
-    console.log( "El número "+ numero+ " es impar.")
-}
+var esPar = numero % 2 == 0 ? "El número "+ numero+ " es par." :"El número "+ numero+ " es impar."
+console.log(esPar);
+
 
 // 7º Usa una variable y di si es positivo o negativo.
 var variable = parseInt(prompt("Introduce un número positivo o negativo"));
 
-if(variable<0){
-    console.log("El número "+ variable+ " es negativo")
-}else{
-    console.log("El número "+ variable+ " es positivo")
-}
+var esNegativo = variable < 0? "El número "+ variable+ " es negativo" : "El número "+ variable+ " es positivo";
+console.log(esNegativo)
+
 // 8º Di si un número es mayor de 100.
 
  var num = parseInt(prompt("Introduce un numero"));
  
- if(num >= 100){
+ if(num > 100){
     console.log("El numero "+num+ " es mayor que 100")
- }else{
+ }else if(num <100){
     console.log("El numero "+num+ " es menor que 100")
+ } else if(num ==100){
+    console.log("El numero "+num+ " es igual que 100")
  }
 
  
@@ -113,3 +130,25 @@ var suma = a + b;
 
 var resultado= suma == c ? "La tercera variable es igual a la suma": "El tercero no es igual a la suma";
 console.log(resultado);
+
+
+//Calcular área según el tipo de figura geométrica.
+
+var square = {
+    sideOne: 1,
+    sideTwo: 3,
+    typeOfGemotricFigure: 'Cuadrado'
+    }
+var circle = {
+    radius: 5,
+    typeOfGemotricFigure: 'Círculo'
+    }
+
+var areaCuadrado= square.sideOne * square.sideTwo;
+var areaCirculo = circle.radius * 3.14;
+
+var calculo = circle.typeOfGemotricFigure =="Círculo" ? areaCirculo: "No es un circulo";
+console.log(calculo)
+
+var Calcula = square.typeOfGemotricFigure =="Cuadrado" ? areaCuadrado : "No es un cuadrado";
+console.log(Calcula)
